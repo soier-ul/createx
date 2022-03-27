@@ -1,0 +1,70 @@
+.breadcrumbs {
+  padding: 16px 0;
+  background-color: $black-200;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    padding-right: 20px;
+    margin-right: 10px;
+    position: relative;
+    font-size: 14px;
+    color: $black-800;
+
+    @include max-w($xs) {
+      margin-bottom: 6px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      background-image: url(../../images/decor/chevron.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      width: 10px;
+      height: 12px;
+      right: 0;
+      top: 3px;
+    }
+
+    &:last-child {
+      padding-right: 0;
+      margin-right: 0;
+      color: $silver;
+      pointer-events: none;
+      margin-bottom: 0;
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  &__link {
+    @include area;
+
+    &:hover {
+      svg {
+        fill: $green-900;
+      }
+    }
+
+    svg {
+      fill: $black-800;
+      width: 20px;
+      height: 20px;
+      transition: fill 0.2s;
+    }
+
+    &--home {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

@@ -1,0 +1,515 @@
+<section class="contacts-page">
+  <h1 class="sr-only">Контакты</h1>
+  <div class="container">
+    <div class="contacts-page__tabs">
+      <h2 class="sr-only">Контакты</h2>
+
+      <ul class="contacts-page__buttons">
+        <li class="contacts-page__buttons-item">
+          <button class="contacts-page__button contacts-page__button--active" data-contact-path="contacts">
+            Cвязаться с нами
+          </button>
+        </li>
+        <li class="contacts-page__buttons-item">
+          <button class="contacts-page__button" data-contact-path="stores">
+            Аутлет-магазины
+          </button>
+        </li>
+        <li class="contacts-page__buttons-item">
+          <button class="contacts-page__button" data-contact-path="faq">
+            FAQ
+          </button>
+        </li>
+      </ul>
+
+      <div class="contacts-page__content contacts-page__content--active" data-contact-target="contacts">
+        <div class="contact-content">
+          <h3 class="contact-content__descr">
+            Если у вас есть какие-либо вопросы, проблемы или комментарии, мы будем рады услышать от вас! Отправьте свой
+            запрос,
+            используя любой из приведенных ниже способов:
+          </h3>
+
+          <ul class="contact-content__connection">
+            <li class="contact-content__connection-item">
+              <a class="contact-content__connection-link" href="tel:4055550128">
+                <svg>
+                  <use xlink:href="images/sprite.svg#icon-iphone"></use>
+                </svg>
+                (405) 555-0128
+              </a>
+            </li>
+            <li class="contact-content__connection-item">
+              <a class="contact-content__connection-link" href="mailto:asd@mail.ru">
+                <svg>
+                  <use xlink:href="images/sprite.svg#icon-message"></use>
+                </svg>
+                Отправьте нам электронное письмо
+              </a>
+            </li>
+            <li class="contact-content__connection-item">
+              <a class="contact-content__connection-link" href="#">
+                <svg>
+                  <use xlink:href="images/sprite.svg#icon-messenger"></use>
+                </svg>
+                Подключайтесь через мессенджер
+              </a>
+            </li>
+            <li class="contact-content__connection-item">
+              <a class="contact-content__connection-link" target="_blank" href="https://twitter.com/">
+                <svg>
+                  <use xlink:href="images/sprite.svg#icon-twitter"></use>
+                </svg>
+                Напишите нам в твиттере
+              </a>
+            </li>
+          </ul>
+
+          <h3 class="contact-content__descr">
+            Или свяжитесь с нами, заполнив приведенную ниже форму:
+          </h3>
+
+          <form class="contact-content__form" action="#">
+            <div class="contact-content__inputs">
+              <label class="contact-content__label">
+                <span class="contact-content__label-descr">
+                  Полное имя*
+                </span>
+                <input class="contact-content__input" type="text" name="name" placeholder="Ваше полное имя" required>
+              </label>
+
+              <label class="contact-content__label">
+                <span class="contact-content__label-descr">
+                  Email*
+                </span>
+                <input class="contact-content__input" type="email" name="email" placeholder="Ваш рабочий e-mail"
+                  required>
+              </label>
+            </div>
+
+            <div class="contact-content__inputs">
+              <label class="contact-content__label">
+                <span class="contact-content__label-descr">
+                  Телефон
+                </span>
+                <input class="contact-content__input" type="tel" name="phone" placeholder="Ваш номер телефона" required>
+              </label>
+
+              <label class="contact-content__label">
+                <span class="contact-content__label-descr">
+                  Статус
+                </span>
+                <input class="contact-content__input" type="text" name="text" placeholder="Озаглавьте свое сообщение"
+                  required>
+              </label>
+            </div>
+
+            <label class="contact-content__textarea-label">
+              <span class="contact-content__label-descr">
+                Сообщение*
+              </span>
+              <textarea class="contact-content__textarea" name="message" placeholder="Напишите свое сообщение здесь"
+                required></textarea>
+            </label>
+
+            <button class="contact-content__btn" type="submit">
+              Отправить сообщение
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="contacts-page__content" data-contact-target="stores">
+        <div class="contact-content">
+          <ul class="contact-content__items">
+            <li class="contact-content__item">
+              <article class="store-card store-card--contacts">
+                <a class="store-card__img" href="#">
+                  <img src="../../../images/stores/1.jpg" alt="Витрина с манекенами в пальто">
+                </a>
+
+                <div class="store-card__content">
+                  <h4 class="store-card__title">
+                    Нью-Йорк, США
+                  </h4>
+
+                  <ul class="store-card__list">
+                    <li class="store-card__item">
+                      <a class="store-card__link" href="tel:4055550128">
+                        <svg>
+                          <use xlink:href="images/sprite.svg#icon-iphone"></use>
+                        </svg>
+                        (405) 555-0128
+                      </a>
+                    </li>
+                    <li class="store-card__item">
+                      <a class="store-card__link" href="mailto:hello@createx.com">
+                        <svg>
+                          <use xlink:href="images/sprite.svg#icon-message"></use>
+                        </svg>
+                        hello@createx.com
+                      </a>
+                    </li>
+                    <li class="store-card__item">
+                      <span class="store-card__text">
+                        <svg>
+                          <use xlink:href="images/sprite.svg#icon-clock"></use>
+                        </svg>
+                        Ежедневно с 9 утра до 9 вечера
+                      </span>
+                    </li>
+                    <li class="store-card__item">
+                      <a class="store-card__link store-card__link--address" target="_blank"
+                        href="https://goo.gl/maps/2b7ufbdvPtbuU36q8">
+                        <svg>
+                          <use xlink:href="images/sprite.svg#icon-marker"></use>
+                        </svg>
+                        20 W 29th Street New York, NY 10001
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </article>
+            </li>
+
+            <li class="contact-content__item">
+              <article class="store-card store-card--contacts">
+                <a class="store-card__img" href="#">
+                  <img src="../../../images/stores/2.jpg" alt="Витрина с манекенами в пальто">
+                </a>
+
+                <div class="store-card__content">
+                  <h4 class="store-card__title">
+                    Делавэр, США
+                  </h4>
+
+                  <ul class="store-card__list">
+                    <li class="store-card__item">
+                      <a class="store-card__link" href="tel:8085550111">
+                        <svg>
+                          <use xlink:href="images/sprite.svg#icon-iphone"></use>
+                        </svg>
+                        (808) 555-0111
+                      </a>
+                    </li>
+                    <li class="store-card__item">
+                      <a class="store-card__link" href="mailto:delaware@createx.com">
+                        <svg>
+                          <use xlink:href="images/sprite.svg#icon-message"></use>
+                        </svg>
+                        Daily from 10 am to 9 pm
+                      </a>
+                    </li>
+                    <li class="store-card__item">
+                      <span class="store-card__text">
+                        <svg>
+                          <use xlink:href="images/sprite.svg#icon-clock"></use>
+                        </svg>
+                        Ежедневно с 9 утра до 9 вечера
+                      </span>
+                    </li>
+                    <li class="store-card__item">
+                      <a class="store-card__link store-card__link--address" target="_blank"
+                        href="https://goo.gl/maps/9mH913Mjj4eAhDk88">
+                        <svg>
+                          <use xlink:href="images/sprite.svg#icon-marker"></use>
+                        </svg>
+                        6391 Elgin St. Celina, Delaware 10299
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </article>
+            </li>
+
+            <li class="contact-content__item">
+              <article class="store-card store-card--contacts">
+                <a class="store-card__img" href="#">
+                  <img src="../../../images/stores/3.jpg" alt="Витрина с манекенами в пальто">
+                </a>
+
+                <div class="store-card__content">
+                  <h4 class="store-card__title">
+                    Нью-Джерси, США
+                  </h4>
+
+                  <ul class="store-card__list">
+                    <li class="store-card__item">
+                      <a class="store-card__link" href="tel:4055550128">
+                        <svg>
+                          <use xlink:href="images/sprite.svg#icon-iphone"></use>
+                        </svg>
+                        (702) 555-0122
+                      </a>
+                    </li>
+                    <li class="store-card__item">
+                      <a class="store-card__link" href="mailto:newjersey@createx.com">
+                        <svg>
+                          <use xlink:href="images/sprite.svg#icon-message"></use>
+                        </svg>
+                        newjersey@createx.com
+                      </a>
+                    </li>
+                    <li class="store-card__item">
+                      <span class="store-card__text">
+                        <svg>
+                          <use xlink:href="images/sprite.svg#icon-clock"></use>
+                        </svg>
+                        Ежедневно с 9 утра до 8 вечера
+                      </span>
+                    </li>
+                    <li class="store-card__item">
+                      <a class="store-card__link store-card__link--address" target="_blank"
+                        href="https://goo.gl/maps/4t6YRbG2GJFJ3fph6">
+                        <svg>
+                          <use xlink:href="images/sprite.svg#icon-marker"></use>
+                        </svg>
+                        2464 Royal Ln. Mesa, New Jersey 45463
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </article>
+            </li>
+
+            <li class="contact-content__item">
+              <article class="store-card store-card--contacts">
+                <a class="store-card__img" href="#">
+                  <img src="../../../images/stores/4.jpg" alt="Витрина с манекенами в пальто">
+                </a>
+
+                <div class="store-card__content">
+                  <h4 class="store-card__title">
+                    Мэн, США
+                  </h4>
+
+                  <ul class="store-card__list">
+                    <li class="store-card__item">
+                      <a class="store-card__link" href="tel:4055550128">
+                        <svg>
+                          <use xlink:href="images/sprite.svg#icon-iphone"></use>
+                        </svg>
+                        (219) 555-0114
+                      </a>
+                    </li>
+                    <li class="store-card__item">
+                      <a class="store-card__link" href="mailto:maine@createx.com">
+                        <svg>
+                          <use xlink:href="images/sprite.svg#icon-message"></use>
+                        </svg>
+                        maine@createx.com
+                      </a>
+                    </li>
+                    <li class="store-card__item">
+                      <span class="store-card__text">
+                        <svg>
+                          <use xlink:href="images/sprite.svg#icon-clock"></use>
+                        </svg>
+                        Ежедневно с 9 утра до 9 вечера
+                      </span>
+                    </li>
+                    <li class="store-card__item">
+                      <a class="store-card__link store-card__link--address" target="_blank"
+                        href="https://goo.gl/maps/eyZNsDgFLLQiroWe8">
+                        <svg>
+                          <use xlink:href="images/sprite.svg#icon-marker"></use>
+                        </svg>
+                        8502 Preston Rd. Inglewood, Maine 98380
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </article>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="contacts-page__content" data-contact-target="faq">
+        <div class="contact-content">
+          <ul class="contact-content__accordions">
+            <li class="contact-content__accordions-item">
+              <div class="contact-content__accordion">
+                <button class="contact-content__accordion-btn">
+                  <span class="contact-content__descr contact-content__descr--accordion">
+                    Нужно ли мне зарегистрироваться, чтобы разместить заказ?
+                  </span>
+                </button>
+
+                <div class="contact-content__accordion-content">
+                  <div class="contact-content__text">
+                    <p>
+                      Знакомства сейчас склоняются перед резюме по недвижимости. Финансирующий элемент челюстей
+                      пластического деформирования.
+                      Админ платформы для отличного блокнота знакомств всегда массовый и активный.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="contact-content__accordions-item">
+              <div class="contact-content__accordion">
+                <button class="contact-content__accordion-btn">
+                  <span class="contact-content__descr contact-content__descr--accordion">
+                    Каково предполагаемое время доставки?
+                  </span>
+                </button>
+
+                <div class="contact-content__accordion-content">
+                  <div class="contact-content__text">
+                    <p>
+                      Знакомства сейчас склоняются перед резюме по недвижимости. Финансирующий элемент челюстей
+                      пластического деформирования.
+                      Админ платформы для отличного блокнота знакомств всегда массовый и активный.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="contact-content__accordions-item">
+              <div class="contact-content__accordion">
+                <button class="contact-content__accordion-btn">
+                  <span class="contact-content__descr contact-content__descr--accordion">
+                    Как я могу оплатить свой заказ?
+                  </span>
+                </button>
+
+                <div class="contact-content__accordion-content">
+                  <div class="contact-content__text">
+                    <p>
+                      Знакомства сейчас склоняются перед резюме по недвижимости. Финансирующий элемент челюстей
+                      пластического деформирования.
+                      Админ платформы для отличного блокнота знакомств всегда массовый и активный.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="contact-content__accordions-item">
+              <div class="contact-content__accordion">
+                <button class="contact-content__accordion-btn">
+                  <span class="contact-content__descr contact-content__descr--accordion">
+                    Могу ли я получить возмещение, если цена изменилась с тех пор, как я ее заказал?
+                  </span>
+                </button>
+
+                <div class="contact-content__accordion-content">
+                  <div class="contact-content__text">
+                    <p>
+                      Знакомства сейчас склоняются перед резюме по недвижимости. Финансирующий элемент челюстей
+                      пластического деформирования.
+                      Админ платформы для отличного блокнота знакомств всегда массовый и активный.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="contact-content__accordions-item">
+              <div class="contact-content__accordion">
+                <button class="contact-content__accordion-btn">
+                  <span class="contact-content__descr contact-content__descr--accordion">
+                    Возмещаете ли вы стоимость доставки, если я что-то верну?
+                  </span>
+                </button>
+
+                <div class="contact-content__accordion-content">
+                  <div class="contact-content__text">
+                    <p>
+                      Знакомства сейчас склоняются перед резюме по недвижимости. Финансирующий элемент челюстей
+                      пластического деформирования.
+                      Админ платформы для отличного блокнота знакомств всегда массовый и активный.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="contact-content__accordions-item">
+              <div class="contact-content__accordion">
+                <button class="contact-content__accordion-btn">
+                  <span class="contact-content__descr contact-content__descr--accordion">
+                    Какие документы будут предоставлены вместе с заказом?
+                  </span>
+                </button>
+
+                <div class="contact-content__accordion-content">
+                  <div class="contact-content__text">
+                    <p>
+                      Знакомства сейчас склоняются перед резюме по недвижимости. Финансирующий элемент челюстей
+                      пластического деформирования.
+                      Админ платформы для отличного блокнота знакомств всегда массовый и активный.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="contact-content__accordions-item">
+              <div class="contact-content__accordion">
+                <button class="contact-content__accordion-btn">
+                  <span class="contact-content__descr contact-content__descr--accordion">
+                    Могу ли я вернуть заказ курьеру, если меня что-то не устраивает?
+                  </span>
+                </button>
+
+                <div class="contact-content__accordion-content">
+                  <div class="contact-content__text">
+                    <p>
+                      Знакомства сейчас склоняются перед резюме по недвижимости. Финансирующий элемент челюстей
+                      пластического деформирования.
+                      Админ платформы для отличного блокнота знакомств всегда массовый и активный.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="contact-content__accordions-item">
+              <div class="contact-content__accordion">
+                <button class="contact-content__accordion-btn">
+                  <span class="contact-content__descr contact-content__descr--accordion">
+                    Что мне делать, если мой заказ еще не доставлен?
+                  </span>
+                </button>
+
+                <div class="contact-content__accordion-content">
+                  <div class="contact-content__text">
+                    <p>
+                      Знакомства сейчас склоняются перед резюме по недвижимости. Финансирующий элемент челюстей
+                      пластического деформирования.
+                      Админ платформы для отличного блокнота знакомств всегда массовый и активный.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="contact-content__accordions-item">
+              <div class="contact-content__accordion">
+                <button class="contact-content__accordion-btn">
+                  <span class="contact-content__descr contact-content__descr--accordion">
+                    Какова ваша Политика Возврата?
+                  </span>
+                </button>
+
+                <div class="contact-content__accordion-content">
+                  <div class="contact-content__text">
+                    <p>
+                      Знакомства сейчас склоняются перед резюме по недвижимости. Финансирующий элемент челюстей
+                      пластического деформирования.
+                      Админ платформы для отличного блокнота знакомств всегда массовый и активный.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

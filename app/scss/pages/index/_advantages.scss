@@ -1,0 +1,210 @@
+.advantages {
+  padding: 60px 0;
+
+  @include max-w($md) {
+    padding: 15px 0;
+  }
+
+  &__top {
+    background-color: $black-900;
+    margin-bottom: 100px;
+
+    @include max-w($lg) {
+      margin-bottom: 60px;
+    }
+
+    @include max-w($md) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__top-inner {
+    padding: 60px 0;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: flex-end;
+
+    &::before {
+      content: '';
+      position: absolute;
+      z-index: 2;
+      left: 0;
+      bottom: 0;
+      width: 490px;
+      height: 330px;
+      background-image: url(../../../images/decor/orange.png);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: -1;
+
+      @include max-w($md) {
+        display: none;
+      }
+    }
+
+    @include max-w($lg) {
+      text-align: right;
+    }
+
+    @include max-w($md) {
+      justify-content: center;
+      text-align: center;
+      padding: 45px 0;
+    }
+  }
+
+  &__top-content {
+    max-width: 650px;
+    color: #fff;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 1.3;
+    margin-bottom: 40px;
+    @include line-clamp(2);
+
+    @include max-w($lg) {
+      font-size: 28px;
+    }
+
+    @include max-w($md) {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__appstores {
+    display: flex;
+
+    @include max-w($lg) {
+      justify-content: flex-end;
+    }
+
+    @include max-w($md) {
+      justify-content: center;
+    }
+  }
+
+  &__appstores-link {
+    margin-right: 26px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__appstores-img {
+    width: 162px;
+    height: 48px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 4px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    position: relative;
+    padding-top: 75px;
+    max-width: 240px;
+    margin: 0 auto;
+    text-align: center;
+
+    &:last-child {
+
+      &::after {
+        display: none;
+      }
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 48px;
+      height: 48px;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 1px;
+      height: 100%;
+      background-image: linear-gradient(to bottom, rgb(#dadbdd, 0), rgb(#dadbdd, 0.5), rgb(#dadbdd, 0.9), rgb(#dadbdd, 0.5), rgb(#dadbdd, 0));
+      right: -40px;
+      top: 0;
+
+      @include max-w($lg) {
+        display: none;
+      }
+    }
+
+    @include max-w($lg) {
+      max-width: 330px;
+      margin: 15px 30px;
+      margin-bottom: 30px;
+    }
+
+    @include max-w($sm) {
+      padding-bottom: 30px;
+      margin: 15px 30px;
+
+      &::after {
+        display: block;
+        right: 0;
+        bottom: 0;
+        top: unset;
+        width: 100%;
+        height: 1px;
+        background-image: linear-gradient(to right, rgb(#dadbdd, 0), rgb(#dadbdd, 0.5), rgb(#dadbdd, 0.9), rgb(#dadbdd, 0.5), rgb(#dadbdd, 0));
+      }
+    }
+
+    &--shipping {
+      &::before {
+        background-image: url(../../../images/icons/icon-shipping.svg);
+      }
+    }
+
+    &--support {
+      &::before {
+        background-image: url(../../../images/icons/icon-support.svg);
+      }
+    }
+
+    &--shield {
+      &::before {
+        background-image: url(../../../images/icons/icon-shield.svg);
+      }
+    }
+
+    &--credit {
+      &::before {
+        background-image: url(../../../images/icons/icon-credit-card.svg);
+      }
+    }
+  }
+
+  &__item-title {
+    font-weight: 500;
+    color: $black-900;
+    font-size: 20px;
+    margin-bottom: 9px;
+  }
+
+  &__item-text {
+    color: $black-700;
+  }
+}

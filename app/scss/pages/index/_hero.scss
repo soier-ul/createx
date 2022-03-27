@@ -1,0 +1,184 @@
+.hero {
+
+  &__slider {
+    height: 800px;
+    width: 100%;
+    position: relative;
+    z-index: 10;
+
+    @include max-w($lg) {
+      height: 630px;
+    }
+
+    @include max-w($sm) {
+      height: 530px;
+    }
+
+    @include max-w($xs) {
+      height: 430px;
+    }
+  }
+
+  &__slide {
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+  }
+
+  &__slide-content {
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: -50px;
+
+    @include max-w($lg) {
+      height: 630px;
+    }
+
+    @include max-w($sm) {
+      height: 530px;
+    }
+
+    @include max-w($xs) {
+      height: 430px;
+    }
+  }
+
+  &__slide-subtitle {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 18px;
+    color: $black-900;
+    letter-spacing: 1px;
+    display: block;
+
+    @include max-w($lg) {
+      font-size: 14px;
+    }
+
+    @include max-w($xs) {
+      font-size: 12px;
+    }
+  }
+
+  &__slide-title {
+    font-weight: 900;
+    font-size: 72px;
+    line-height: 1.3;
+    letter-spacing: 1px;
+    color: $black-900;
+    margin-bottom: 50px;
+
+    @include max-w($lg) {
+      font-size: 54px;
+    }
+
+    @include max-w($sm) {
+      font-size: 34px;
+      margin-bottom: 34px;
+    }
+  }
+
+  &__slide-link {
+    padding: 15px 40px;
+    border: 1px solid $green-900;
+    border-radius: 4px;
+    color: $green-900;
+    font-weight: 500;
+    margin-right: 25px;
+    background-color: transparent;
+    outline: transparent;
+    transition: background-color 0.3s ease-out, color 0.3s ease-out, box-shadow 0.3s ease-in-out;
+
+    &:focus {
+      box-shadow: 0 0 0 3px #fff;
+    }
+
+    &:hover {
+      background-color: $green-900;
+      color: #fff;
+      box-shadow: 0 0 15px 3px rgba(#000, 0.25) inset;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    @include max-w($lg) {
+      padding: 12px 26px;
+      margin-right: 16px;
+    }
+
+    @include max-w($sm) {
+      padding: 10px 16px;
+      font-size: 14px;
+      margin-right: 8px;
+    }
+
+    &--green {
+      background-color: $green-900;
+      color: #fff;
+    }
+  }
+
+  &__arrows {
+    position: absolute;
+    z-index: 10;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: rgba(#fff, 0.5);
+    transition: background-color 0.3s ease-out;
+
+    &:hover {
+      background-color: #fff;
+    }
+
+    &::after {
+      display: none;
+    }
+
+    svg {
+      width: 24px;
+      height: 15px;
+      fill: $black-800;
+    }
+
+    @include max-w($xl) {
+      display: none;
+    }
+
+    &--left {
+      left: 28px;
+      transform: rotate(-180deg);
+    }
+
+    &--right {
+      right: 28px;
+    }
+  }
+
+  &__pagination {
+    position: absolute;
+    z-index: 10;
+    font-size: 0;
+    margin-bottom: 90px;
+
+    @include max-w($md) {
+      margin-bottom: 70px;
+    }
+
+    .swiper-pagination-bullet {
+      width: 150px;
+      height: 2px;
+      background-color: $black-800;
+      @include area;
+      border-radius: 1px;
+
+      @include max-w($md) {
+        width: 65px;
+      }
+    }
+  }
+}

@@ -1,0 +1,396 @@
+.blogs-page {
+  padding: 32px 0 120px 0;
+
+  @include max-w($lg) {
+    padding: 30px 0 60px 0;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    @include max-w($lg) {
+      justify-content: center;
+    }
+  }
+
+  &__content {
+    max-width: 810px;
+    margin-right: 15px;
+
+    @include max-w($lg) {
+      margin-right: 0;
+      position: relative;
+    }
+  }
+
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__btn-on {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    background-color: #fff;
+    color: $green-900;
+    border: 1px solid $green-900;
+    padding: 11px 16px 12px 16px;
+    border-radius: 4px;
+    height: 44px;
+    max-width: 120px;
+    width: 100%;
+    letter-spacing: 0.025em;
+    font-size: 14px;
+    display: none;
+
+    @include max-w($lg) {
+      display: block;
+    }
+
+    @include max-w($md) {
+      top: 0;
+    }
+
+    @include max-w($sm) {
+      top: 0;
+      padding: 8px;
+      max-width: 90px;
+      height: 36px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 60px;
+
+    @include max-w($md) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__item {
+    margin-bottom: 55px;
+    width: 100%;
+
+    @include max-w($md) {
+      margin-bottom: 35px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__pagination {
+    margin: 0;
+  }
+
+  &__aside {
+    max-width: 342px;
+    width: 100%;
+
+    @include max-w($lg) {
+      position: fixed;
+      background-color: #fff;
+      right: 0;
+      top: 0;
+      padding: 60px 15px 15px 15px;
+      border: 1px solid $silver-300;
+      border-right: none;
+      border-radius: 4px 0 0 4px;
+      height: 100vh;
+      overflow-y: auto;
+      z-index: 100;
+      transform: translateX(200%);
+      transition: transform 0.4s ease;
+    }
+
+    &--active {
+      transform: translate(0);
+    }
+  }
+
+  &__btn-off {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 8px;
+    right: 0;
+    display: none;
+
+    @include max-w($lg) {
+      display: flex;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      width: 25px;
+      height: 2px;
+      background-color: $green-900;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  &__aside-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  &__aside-item {
+    width: 100%;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid $silver-300;
+
+    &:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border: none;
+    }
+  }
+
+  &__input-form {
+    width: 100%;
+    position: relative;
+  }
+
+  &__input-label {
+    display: block;
+  }
+
+  &__input {
+    width: 100%;
+    height: 44px;
+    line-height: 1;
+    font-size: 14px;
+    border-radius: 4px;
+    outline: transparent;
+    padding: 11px 16px 12px 16px;
+    border: 1px solid $silver-100;
+    transition: border-color 0.2s ease;
+
+    &:focus {
+      border-color: $green-900;
+    }
+
+    &:hover {
+      &::placeholder {
+        color: $black-800;
+      }
+    }
+
+    &::placeholder {
+      color: $silver;
+      transition: color 0.2s ease;
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+      width: 16px;
+      height: 16px;
+      fill: $black-800;
+    }
+  }
+
+  &__aside-title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: $black-900;
+  }
+
+  &__categories {
+    display: block;
+  }
+
+  &__categories-label {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 12px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .blogs-page__categories-input {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      opacity: 0;
+    }
+  }
+
+  &__categories-input:checked+span {
+    color: $green-900;
+  }
+
+  &__categories-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+  }
+
+  &__categories-text {
+    transition: color 0.2s ease;
+  }
+
+  &__categories-num {
+    font-weight: 400;
+    transition: color 0.2s ease;
+  }
+
+  &__aside-posts {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__aside-post {
+    margin-bottom: 24px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__tags {
+    display: block;
+  }
+
+  &__tags-label {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    margin-right: 8px;
+    margin-bottom: 8px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    .blogs-page__tags-input {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      opacity: 0;
+    }
+  }
+
+  &__tags-input:checked+span {
+    background-color: $green-900;
+    color: #fff;
+    border-color: $green-900;
+  }
+
+  &__tags-text {
+    display: inline-block;
+    line-height: 1;
+    font-weight: 500;
+    font-size: 14px;
+    color: $black-700;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid $silver-100;
+    background-color: #fff;
+    transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+  }
+}
+
+.blog-mini {
+  max-width: 342px;
+
+  &:hover {
+    .blog-mini__title {
+      color: $green-900;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    width: 100%;
+  }
+
+  &__img {
+    max-width: 100px;
+    height: 100px;
+    border-radius: 4px;
+    object-fit: cover;
+    object-position: center;
+    margin-right: 15px;
+  }
+
+  &__info {
+    max-width: 227px;
+  }
+
+  &__date {
+    display: inline-flex;
+    font-size: 14px;
+    color: $black-700;
+    padding-left: 24px;
+    margin-bottom: 6px;
+    position: relative;
+    @include line-clamp(1);
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 16px;
+      height: 16px;
+      background-image: url(../../../images/decor/clock.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+    }
+  }
+
+  &__title {
+    color: $black-900;
+    font-size: 15px;
+    font-weight: 700;
+    @include line-clamp(3);
+    transition: color 0.3s ease;
+  }
+
+  &--next {
+    .blog-mini__img {
+      order: 1;
+      margin: 0;
+    }
+
+    .blog-mini__info {
+      margin-right: 15px;
+    }
+  }
+}

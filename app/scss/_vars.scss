@@ -1,0 +1,66 @@
+$black-900: #1e212c;
+$black-800: #424551;
+$black-700: #787a80;
+$black-200: #f4f5f6;
+
+$silver: #9a9ca5;
+$silver-300: #e5e8ed;
+$silver-100: #d7dadd;
+
+$green-900: #17696a;
+$green-200: #03cea4;
+
+$red: #ff4242;
+
+$orange: #f89828;
+
+$blue: #5a87fc;
+
+
+$xl: 1400px;
+$lg: 1200px;
+$md: 992px;
+$sm: 768px;
+$xs: 480px;
+
+@mixin max-w($width) {
+  @media (max-width: $width) {
+    @content;
+  }
+}
+
+@mixin min-w($width) {
+  @media (max-width: calc($width + 1px)) {
+    @content;
+  }
+}
+
+@mixin line-clamp($lines: 1) {
+  @if $lines <=1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  @else {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+  }
+}
+
+@mixin area {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 45px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

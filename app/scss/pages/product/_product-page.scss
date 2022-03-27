@@ -1,0 +1,470 @@
+.product-page {
+  padding: 32px 0;
+
+  @include max-w($sm) {
+    padding: 16px 0;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+
+    @include max-w($sm) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__title {
+    color: $black-900;
+    font-size: 34px;
+    line-height: 1.2;
+    font-weight: 900;
+
+    @include max-w($lg) {
+      font-weight: 700;
+      max-width: 500px;
+    }
+
+    @include max-w($sm) {
+      margin-bottom: 10px;
+      font-size: 26px;
+    }
+  }
+
+  &__article {
+    display: flex;
+    align-items: center;
+    color: $black-700;
+    line-height: 1;
+
+    @include max-w($sm) {
+      font-size: 12px;
+    }
+  }
+
+  &__article-text {
+    margin-right: 4px;
+    font-weight: 700;
+  }
+
+  &__overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba($black-900, 0.7);
+    height: 100vh;
+    width: 100%;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.2s;
+
+    &--visible {
+      opacity: 1;
+      visibility: visible;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+
+  &__modal {
+    max-width: 485px;
+    width: 100%;
+    padding: 42px;
+    background-color: #fff;
+    border-radius: 9px;
+    position: relative;
+    display: none;
+
+    &--visible {
+      display: block;
+    }
+  }
+
+  &__modal-title {
+    font-weight: 700;
+    color: $black-900;
+    font-size: 28px;
+    margin-bottom: 26px;
+    text-align: center;
+  }
+
+  &__modal-off {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    transition: opacity 0.2s ease;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      width: 25px;
+      height: 2px;
+      background-color: $green-900;
+      border-radius: 2px;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__modal-form {
+    width: 100%;
+    display: block;
+  }
+
+  &__modal-label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    font-size: 14px;
+    cursor: pointer;
+
+    &--textarea {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__modal-text {
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+
+  &__modal-input {
+    height: 44px;
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid $silver-100;
+    padding: 11px 16px 12px 16px;
+    outline: transparent;
+    transition: border-color 0.2s ease;
+
+    &::placeholder {
+      color: $silver;
+      transition: color 0.2s ease;
+    }
+
+    &:focus {
+      border-color: $green-900;
+
+      &::placeholder {
+        color: $black-800;
+      }
+    }
+
+    &:hover {
+      &::placeholder {
+        color: $black-800;
+      }
+    }
+  }
+
+  .is-open .choices__inner {
+    border-color: $green-900;
+  }
+
+  .is-open .choices__list--dropdown {
+    border-color: $green-900;
+  }
+
+  .choices[data-type*=select-one] .choices__inner {
+    color: $silver;
+  }
+
+  &__file-btn {
+    width: 100%;
+    height: 160px;
+    border-radius: 4px;
+    background-color: #fff;
+    border: 1px dashed $silver-100;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__file-text {
+    display: inline-block;
+    line-height: 1;
+    font-size: 12px;
+    font-weight: 500;
+    color: $green-900;
+    letter-spacing: 0.5px;
+    border: 1px solid $green-900;
+    max-width: 400px;
+    height: 36px;
+    border-radius: 4px;
+    padding: 10px;
+    @include line-clamp(1);
+  }
+
+  &__modal-textarea {
+    height: 108px;
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid $silver-100;
+    resize: none;
+    padding: 12px;
+    outline: transparent;
+    line-height: 1;
+    transition: border-color 0.2s ease;
+
+    &::placeholder {
+      color: $silver;
+      transition: color 0.2s ease;
+    }
+
+    &:focus {
+      border-color: $green-900;
+
+      &::placeholder {
+        color: $black-800;
+      }
+    }
+
+    &:hover {
+      &::placeholder {
+        color: $black-800;
+      }
+    }
+  }
+
+  &__modal-btn {
+    height: 44px;
+    width: 100%;
+    padding: 11px 16px 12px 16px;
+    background-color: $green-900;
+    color: #fff;
+    border-radius: 4px;
+    letter-spacing: 0.035em;
+    font-size: 14px;
+    font-weight: 500;
+    transition: box-shadow 0.2s ease, color 0.2s ease;
+    @include line-clamp(1);
+
+    &:hover {
+      box-shadow: 0 0 20px 3px rgba($black-900, 0.2) inset;
+      color: rgba(#fff, 0.8);
+    }
+  }
+}
+
+.product-style {
+  padding: 100px 0;
+
+  @include max-w($md) {
+    padding: 40px 0;
+  }
+
+  @include max-w($sm) {
+    padding: 24px 0;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    @include max-w($sm) {
+      flex-direction: column;
+    }
+  }
+
+  &__title {
+    font-weight: 900;
+    margin-bottom: 60px;
+
+    @include max-w($md) {
+      margin-bottom: 32px;
+    }
+
+    @include max-w($xs) {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    position: relative;
+    margin-right: 30px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($black-900, 0.1);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    &:hover {
+      &::before {
+        opacity: 1;
+      }
+    }
+
+    @include max-w($md) {
+      margin-right: 15px;
+    }
+
+    @include max-w($sm) {
+      display: block;
+      width: 100%;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__img {
+    display: block;
+    width: 495px;
+    height: 600px;
+    border-radius: 4px;
+    object-fit: cover;
+    object-position: center;
+
+    @include max-w($md) {
+      height: 345px;
+      width: 345px;
+    }
+
+    @include max-w($sm) {
+      width: 100%;
+      object-position: top;
+    }
+
+    @include max-w($xs) {
+      height: 240px;
+    }
+  }
+
+  &__slider {
+    position: relative;
+    width: 600px;
+    padding-top: 120px;
+    padding-bottom: 115px;
+    margin: 0;
+    margin-top: -120px;
+
+    @include max-w($md) {
+      padding-top: 80px;
+      margin-top: -80px;
+      padding-bottom: 80px;
+    }
+
+    @include max-w($sm) {
+      padding-top: 0;
+      margin: 0;
+      width: 100%;
+      padding-bottom: 50px;
+    }
+
+    .swiper-pagination {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .swiper-pagination-bullet {
+      width: 30px;
+      height: 2px;
+      border-radius: 4px;
+      background-color: $black-700;
+      @include area;
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: $black-800;
+    }
+
+    .swiper-pagination-bullets .swiper-pagination-bullet {
+      margin: 0 5px;
+    }
+  }
+
+  &__slide {
+
+    @include max-w($lg) {
+      width: auto;
+    }
+  }
+
+  &__arrows {
+    height: 48px;
+    position: absolute;
+    right: 0;
+    width: 100px;
+    top: 0;
+    display: flex;
+
+    @include max-w($sm) {
+      display: none;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      width: 48px;
+      height: 48px;
+      border-radius: 100%;
+      transition: background-color 0.3s ease, opacity 0.2s ease;
+
+      svg {
+        width: 20px;
+        height: 20px;
+        fill: $black-800;
+        transition: fill 0.3s ease;
+      }
+
+      &::after {
+        display: none;
+      }
+
+      &:hover {
+        background-color: $green-900;
+
+        svg {
+          fill: #fff;
+        }
+      }
+    }
+
+    .swiper-button-prev {
+      left: 0;
+
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+
+    .swiper-button-next {
+      right: 0;
+    }
+
+    .swiper-button-disabled {
+      opacity: 0.2;
+    }
+  }
+}
