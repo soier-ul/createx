@@ -1,11 +1,8 @@
 $(function () {
-
-  // contact accordion
   $('.contact-content__accordion-btn').on('click', function () {
     $(this).toggleClass('contact-content__accordion-btn--active');
     $(this).next('.contact-content__accordion-content').slideToggle(350);
   });
-  // contact accordion
 
   // contact tabs
   const contactTabs = document.querySelector('.contacts-page__tabs');
@@ -49,8 +46,6 @@ $(function () {
     $('.blogs-page__aside').removeClass('blogs-page__aside--active');
   });
   // blogs
-
-
 
   // header hide
   let lastScroll = 0;
@@ -301,7 +296,6 @@ $(function () {
     }
   });
   // password hide
-
 
   // swipe to up
   $('.footer__link').on("click", function (event) {
@@ -770,7 +764,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-  const date = new Date('April 2 2022 00:00:00');
+  const date = new Date('june 2 2022 00:00:00');
 
   const daysVal = document.querySelector('.time-count__days .time-count__val');
   const hoursVal = document.querySelector('.time-count__hours .time-count__val');
